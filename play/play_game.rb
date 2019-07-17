@@ -32,6 +32,8 @@ while  i < 50
     input = gets.chomp
     if input.downcase == "q"
         i += 1
+        puts "Here is the current board"
+        set_up.display_board(y)
     else 
         #prompt coords
         puts "Player " + "#{player} ".colorize(:light_blue) + ", please enter a coord x,y to place your " + "#{move} ".colorize(:light_blue)
