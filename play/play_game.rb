@@ -28,7 +28,7 @@ while  i < 50
     #  display instruction for each player to play
     puts "It's Player " + "#{player} ".colorize(:light_blue) + "'s turn now. Your move symbol is" + " #{move} ".colorize(:light_blue)
     #prompt input if player would like to give up the move
-    puts "enter 'q' to give up your move or press any key to continue."
+    puts "enter 'q' to give up your move or press enter to continue."
     input = gets.chomp
     if input.downcase == "q"
         i += 1
@@ -47,8 +47,6 @@ while  i < 50
         coord_input_y = coord_input_y.to_i
     
         #  register x & y coord, reject coord if the move is already taken
-        p  coord_input_x
-        p  coord_input_y
         if y[coord_input_x][coord_input_y] == "."
             puts  "Move accepted, here's the current board:" 
             move == "X" ? y[coord_input_x][coord_input_y] = move.colorize(:green) : y[coord_input_x][coord_input_y] = move.colorize(:blue)
@@ -56,7 +54,7 @@ while  i < 50
         else 
            valid.wrong_position
            set_up.display_board(y)
-           i = i 
+           i -= 1 
         end
         # Judge winning
         if  win.winner_horizontal(y)
