@@ -51,7 +51,7 @@ Player 1 , please enter a coord x,y to place your X
 place x-coord (please enter number 1,2,3 only)
 1
 place y-coord (please enter number 1,2,3 only)
-2
+1
 Move accepted, here's the current board:
 X . .
 . . .
