@@ -28,7 +28,7 @@ while  i < 50
     #  display instruction for each player to play
     puts "It's Player " + "#{player} ".colorize(:light_blue) + "'s turn now. Your move symbol is" + " #{move} ".colorize(:light_blue)
     #prompt input if player would like to give up the move
-    puts "enter 'q' to give up your move or press enter to continue."
+    puts "enter 'q' to give up your move or press Enter to continue."
     input = gets.chomp
     if input.downcase == "q"
         i += 1
@@ -82,7 +82,3 @@ while  i < 50
     end
 end
 
-
-# edgecase
-#  keep poping wrong move even though the move hasn't taken yet
-#  keep poping wrong move even, wrong player turn

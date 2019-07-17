@@ -5,7 +5,7 @@ class WinCase
     def winner_horizontal(board)
         check = []
         board.each do |item|
-            if !(item.any? {|x| x != item[0]}) && !item.include?(".")#check if the values of all elements in array the same, will be true if they are the same
+            if !(item.any? {|x| x != item[0]}) && !item.include?(".")#check if the values of all elements in array the same, return true if they are the same
                 check.push(true)
              else !(item.any? {|x| x != item[0]}) 
              check.push(false)
