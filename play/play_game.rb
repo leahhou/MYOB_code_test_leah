@@ -85,3 +85,4 @@ end
 
 # edgecase
 #  keep poping wrong move even though the move hasn't taken yet
+#  keep poping wrong move even, wrong player turn
