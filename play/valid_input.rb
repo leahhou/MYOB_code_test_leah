@@ -9,6 +9,7 @@ class ValidInput
             wrong_input
             puts  "place " + "#{coord}".colorize(:yellow) + "-coord" + " (please enter number 1,2,3 only)".colorize(:yellow)
             coord_input = gets.chomp
+            coord_input
             # i += 0
         end
         coord_input = coord_input.to_i - 1
@@ -16,6 +17,7 @@ class ValidInput
             wrong_input
             puts  "place " + "#{coord}".colorize(:yellow) + "-coord" + " (please enter number 1,2,3 only)".colorize(:yellow)
             coord_input = gets.chomp.to_i - 1
+            coord_input
             # i += 0
         end
         coord_input
