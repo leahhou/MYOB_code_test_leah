@@ -35,7 +35,7 @@ while  i < 50
         puts "Here is the current board"
         set_up.display_board(y)
     else 
-        #prompt coords
+    #prompt coords
         puts "Player " + "#{player} ".colorize(:light_blue) + ", please enter a coord x,y to place your " + "#{move} ".colorize(:light_blue)
         #  validate x & y coord
         coord_input_x = ""
@@ -47,7 +47,6 @@ while  i < 50
         coord = "y"
         coord_input_y= valid.instruct_input(coord_input_y,coord)
         coord_input_y = coord_input_y.to_i
-    
         #  register x & y coord, reject coord if the move is already taken
         if y[coord_input_x][coord_input_y] == "."
             puts  "Move accepted, here's the current board:" 
@@ -58,19 +57,19 @@ while  i < 50
            set_up.display_board(y)
            i -= 1 
         end
-        # Judge winning
+    # Judge winning or draw
         if  win.winner_horizontal(y)
             puts "Player #{player} won!".colorize(:yellow)
             p "Game is over now"
-            i = 50
+            break
         elsif win.winner_vertical(y)
             puts "Player #{player} won!".colorize(:yellow)
             p "Game is over now"
-            i = 50
+            break
         elsif win.winner_diagonal(y)
             puts "Player #{player} won!".colorize(:yellow)
             p "Game is over now"
-            i = 50
+            break
         elsif win.draw(y)
             puts "It's a draw".colorize(:yellow)
             p "Game is over now"
@@ -80,7 +79,6 @@ while  i < 50
         end 
     end
 end
-
 
 
 # edgecase

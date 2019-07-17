@@ -10,7 +10,6 @@ class ValidInput
             puts  "place " + "#{coord}".colorize(:yellow) + "-coord" + " (please enter number 1,2,3 only)".colorize(:yellow) + " and press enter"
             coord_input = gets.chomp
             coord_input
-            # i += 0
         end
         coord_input = coord_input.to_i - 1
         until inputVerify.include?(coord_input)
@@ -18,7 +17,6 @@ class ValidInput
             puts  "place " + "#{coord}".colorize(:yellow) + "-coord" + " (please enter number 1,2,3 only)".colorize(:yellow) + " and press enter"
             coord_input = gets.chomp.to_i - 1
             coord_input
-            # i += 0
         end
         coord_input
     end
