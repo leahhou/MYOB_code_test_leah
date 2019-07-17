@@ -14,7 +14,7 @@ class SetUp
         puts "Top row has X coord 1, middle row has X coord 2, 3rd row has X coord 3."
         puts "left column has Y coord 1, middle column has Y coord 2, far right row has Y coord 3."
         puts "Have Fun Playing!"
-        puts "Press enter key to start the game".colorize(:yellow)
+        puts "Press Enter to start the game".colorize(:yellow)
         gets.chomp
         puts "Here's the current board:".colorize(:yellow)
     end
