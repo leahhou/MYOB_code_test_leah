@@ -58,4 +58,15 @@ X . .
 . . .
 
 It's Player 2 's turn now. Your move symbol is O 
-enter 'q' to give up your move or press any key to continue.
+enter 'q' to give up your move or press enter to continue.
+
+Player 2 , please enter a coord x,y to place your O 
+place x-coord (please enter number 1,2,3 only) and press enter
+2
+place y-coord (please enter number 1,2,3 only) and press enter
+2
+Move accepted, here's the current board:
+X . .
+. O .
+. . .
+
