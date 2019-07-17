@@ -3,8 +3,8 @@ require_relative 'set_up'
 require_relative 'win_case'
 require_relative 'valid_input'
 
-valid = ValidInput.new
 set_up = SetUp.new
+valid = ValidInput.new
 win = WinCase.new
 
 # Welcome game
@@ -37,16 +37,18 @@ while  i < 50
     else 
     #prompt coords
         puts "Player " + "#{player} ".colorize(:light_blue) + ", please enter a coord x,y to place your " + "#{move} ".colorize(:light_blue)
-        #  validate x & y coord
+        # validate x coord
         coord_input_x = ""
-        coord_input_y = ""
-        coord = "x"
-
-        coord_input_x = valid.instruct_input(coord_input_x,coord)
+        symbol = "x"
+        coord_input_x = valid.instruct_input(coord_input_x, symbol)
         coord_input_x = coord_input_x.to_i
-        coord = "y"
-        coord_input_y= valid.instruct_input(coord_input_y,coord)
+
+        # validate y coord
+        coord_input_y = ""
+        symbol = "y"
+        coord_input_y= valid.instruct_input(coord_input_y, symbol)
         coord_input_y = coord_input_y.to_i
+        
         #  register x & y coord, reject coord if the move is already taken
         if y[coord_input_x][coord_input_y] == "."
             puts  "Move accepted, here's the current board:" 

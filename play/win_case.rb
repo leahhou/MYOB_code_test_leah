@@ -1,12 +1,12 @@
 require 'colorize'
 
 class WinCase
+    #horizontal win case
     def winner_horizontal(board)
         check = []
         board.each do |item|
             if !(item.any? {|x| x != item[0]}) && !item.include?(".")#check if the values of all elements in array the same, will be true if they are the same
                 check.push(true)
-                # break
              else !(item.any? {|x| x != item[0]}) 
              check.push(false)
             end
@@ -24,6 +24,7 @@ class WinCase
         board.transpose
     end
     
+    #vertial win case
     def winner_vertical(board)
         board_new = rotate_board(board)
         winner_horizontal(board_new)
@@ -36,11 +37,13 @@ class WinCase
         board_start
     end
     
+    #diagonal win case
     def winner_diagonal(board)
         board_new = diagonal_board(board)
         winner_horizontal(board_new)
     end
 
+    #draw case
     def draw(board)
         not_empty_check = []
         board.each do |row|
