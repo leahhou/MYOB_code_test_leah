@@ -1,5 +1,5 @@
-### People usually set goals at the beginning of the year as their new year resolutions. Yet the majority have failed to achieve them.
-### Instruction to open files to play the game Tic Tac Toe!:
+### Welcome to Leah's Tic Tac Toe's Game
+### Please follow the instruction  below to download the game and play on your local computer:
 
 * Step 1: Download the whole repo to your local machine so that all files are available on your local computer
 * Step 2: Open terminal in your local computer
