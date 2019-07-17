@@ -35,18 +35,18 @@ while  i < 50
     else 
         #prompt coords
         puts "Player " + "#{player} ".colorize(:light_blue) + ", please enter a coord x,y to place your " + "#{move} ".colorize(:light_blue)
-
         #  validate x & y coord
         coord_input_x = ""
         coord_input_y = ""
         coord = "x"
-        valid.instruct_input(coord_input_x,coord)
-        coord = "y"
-        valid.instruct_input(coord_input_y,coord)
 
-        #  register x & y coord, reject coord if the move is already taken
+        coord_input_x = valid.instruct_input(coord_input_x,coord)
         coord_input_x = coord_input_x.to_i
+        coord = "y"
+        coord_input_y= valid.instruct_input(coord_input_y,coord)
         coord_input_y = coord_input_y.to_i
+    
+        #  register x & y coord, reject coord if the move is already taken
         p  coord_input_x
         p  coord_input_y
         if y[coord_input_x][coord_input_y] == "."
